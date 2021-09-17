@@ -61,6 +61,27 @@ def lpdet_inv(sigma):
     return lpdet
 
 @jit(nopython=True)
+def uniform_kabsch_log_lik(x, mu):
+    # meta data
+    nFrames = x.shape[0]
+    nAtoms = x.shape[1]
+    # compute log Likelihood for all points
+    logLik = 0.0
+    sampleVar = 0.0
+    for i in range(nFrames):
+        for j in range(3):
+            disp = x[i,:,j] - mu[:,j]
+            temp = np.dot(disp,disp)
+            sampleVar += temp
+            logLik += temp
+    # finish variance
+    sampleVar /= (nFrames-1)*3*(nAtoms-1)
+    logLik /= sampleVar
+    logLik +=  nFrames * 3 * (nAtoms-1) * np.log(sampleVar)
+    logLik *= -0.5
+    return logLik
+
+@jit(nopython=True)
 def intermediate_kabsch_log_lik(x, mu, kabschWeights):
     # meta data
     nFrames = x.shape[0]
@@ -339,7 +360,7 @@ def traj_iterative_average_weighted_kabsch(trajData,thresh=1E-4,maxSteps=200):
 
 # compute the average structure from trajectory data
 @jit(nopython=True)
-def traj_iterative_average(trajData,thresh=1E-10):
+def traj_iterative_average(trajData,thresh=1E-3):
     # trajectory metadata
     nFrames = trajData.shape[0]
     nAtoms = trajData.shape[1]
@@ -355,9 +376,11 @@ def traj_iterative_average(trajData,thresh=1E-10):
         alignedPos[ts] -= mu
     # Initialize average as first frame
     avg = np.copy(alignedPos[0]).astype(np.float64)
-    # perform iterative alignment and average to converge average
-    avgRmsd = 2*thresh
-    while avgRmsd > thresh:
+    logLik = uniform_kabsch_log_lik(alignedPos,avg)
+    # perform iterative alignment and average to converge log likelihood
+    logLikDiff = 10
+    count = 1
+    while logLikDiff > thresh:
         # rezero new average
         newAvg = np.zeros((nAtoms,nDim),dtype=np.float64)
         # align trajectory to average and accumulate new average
@@ -366,9 +389,14 @@ def traj_iterative_average(trajData,thresh=1E-10):
             newAvg += alignedPos[ts]
         # finish average
         newAvg /= nFrames
-        #avgRmsd = rmsd(avg,newAvg,center=False,superposition=False)
-        avgRmsd = rmsd_kabsch(avg,newAvg)
+        # compute log likelihood
+        newLogLik = uniform_kabsch_log_lik(alignedPos,avg)
+        logLikDiff = np.abs(newLogLik-logLik)
+        logLik = newLogLik
+        # copy new average
         avg = np.copy(newAvg)
+        print(count, logLik)
+        count += 1
     return avg, alignedPos
 
 # compute the average structure from trajectory data
