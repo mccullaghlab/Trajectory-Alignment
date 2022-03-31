@@ -1,15 +1,15 @@
 TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
 CRYST1    2.634    5.853    3.536  90.00  90.00  90.00 P 1           1
-ATOM      1  C   UNK M   1       0.634  -3.493   1.363  1.00  0.00      SYST C
-ATOM      2  C   UNK M   1       0.440  -2.736   1.097  1.00  0.00      SYST C
-ATOM      3  C   UNK M   1       0.206  -1.888   0.824  1.00  0.00      SYST C
-ATOM      4  C   UNK M   1      -0.080  -1.011   0.569  1.00  0.00      SYST C
-ATOM      5  C   UNK M   1      -0.402  -0.126   0.323  1.00  0.00      SYST C
-ATOM      6  C   UNK M   1      -0.755   0.748   0.098  1.00  0.00      SYST C
-ATOM      7  C   UNK M   1      -1.359   1.468   0.115  1.00  0.00      SYST C
-ATOM      8  C   UNK M   1      -0.860   1.994  -0.458  1.00  0.00      SYST C
-ATOM      9  C   UNK M   1      -0.097   2.112  -1.006  1.00  0.00      SYST C
-ATOM     10  C   UNK M   1       0.707   1.791  -1.354  1.00  0.00      SYST C
-ATOM     11  C   UNK M   1       0.647   0.991  -0.914  1.00  0.00      SYST C
-ATOM     12  C   UNK M   1       0.918   0.151  -0.658  1.00  0.00      SYST C
+ATOM      1  C   UNK X   1       0.639  -3.507   1.367  1.00  0.00      SYST C
+ATOM      2  C   UNK X   1       0.439  -2.736   1.097  1.00  0.00      SYST C
+ATOM      3  C   UNK X   1       0.203  -1.883   0.824  1.00  0.00      SYST C
+ATOM      4  C   UNK X   1      -0.083  -1.005   0.568  1.00  0.00      SYST C
+ATOM      5  C   UNK X   1      -0.404  -0.122   0.322  1.00  0.00      SYST C
+ATOM      6  C   UNK X   1      -0.754   0.749   0.096  1.00  0.00      SYST C
+ATOM      7  C   UNK X   1      -1.355   1.466   0.114  1.00  0.00      SYST C
+ATOM      8  C   UNK X   1      -0.860   1.993  -0.457  1.00  0.00      SYST C
+ATOM      9  C   UNK X   1      -0.099   2.111  -1.004  1.00  0.00      SYST C
+ATOM     10  C   UNK X   1       0.705   1.790  -1.351  1.00  0.00      SYST C
+ATOM     11  C   UNK X   1       0.645   0.992  -0.913  1.00  0.00      SYST C
+ATOM     12  C   UNK X   1       0.925   0.153  -0.663  1.00  0.00      SYST C
 END
