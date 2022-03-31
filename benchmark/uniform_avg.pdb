@@ -1,15 +1,15 @@
 TITLE     MDANALYSIS FRAME 0: Created by PDBWriter
-CRYST1    2.634    5.853    3.536  90.00  90.00  90.00 P 1           1
-ATOM      1  C   UNK X   1       0.639  -3.507   1.367  1.00  0.00      SYST C
-ATOM      2  C   UNK X   1       0.439  -2.736   1.097  1.00  0.00      SYST C
-ATOM      3  C   UNK X   1       0.203  -1.883   0.824  1.00  0.00      SYST C
-ATOM      4  C   UNK X   1      -0.083  -1.005   0.568  1.00  0.00      SYST C
-ATOM      5  C   UNK X   1      -0.404  -0.122   0.322  1.00  0.00      SYST C
-ATOM      6  C   UNK X   1      -0.754   0.749   0.096  1.00  0.00      SYST C
-ATOM      7  C   UNK X   1      -1.355   1.466   0.114  1.00  0.00      SYST C
-ATOM      8  C   UNK X   1      -0.860   1.993  -0.457  1.00  0.00      SYST C
-ATOM      9  C   UNK X   1      -0.099   2.111  -1.004  1.00  0.00      SYST C
-ATOM     10  C   UNK X   1       0.705   1.790  -1.351  1.00  0.00      SYST C
-ATOM     11  C   UNK X   1       0.645   0.992  -0.913  1.00  0.00      SYST C
-ATOM     12  C   UNK X   1       0.925   0.153  -0.663  1.00  0.00      SYST C
+CRYST1    2.455    5.728    3.168  90.00  90.00  90.00 P 1           1
+ATOM      1  C   UNK X   1       0.819  -3.452   1.443  1.00  0.00      SYST C
+ATOM      2  C   UNK X   1       0.592  -2.696   1.162  1.00  0.00      SYST C
+ATOM      3  C   UNK X   1       0.328  -1.861   0.864  1.00  0.00      SYST C
+ATOM      4  C   UNK X   1       0.019  -0.999   0.580  1.00  0.00      SYST C
+ATOM      5  C   UNK X   1      -0.348  -0.133   0.338  1.00  0.00      SYST C
+ATOM      6  C   UNK X   1      -0.747   0.721   0.127  1.00  0.00      SYST C
+ATOM      7  C   UNK X   1      -1.374   1.420   0.175  1.00  0.00      SYST C
+ATOM      8  C   UNK X   1      -0.975   1.966  -0.446  1.00  0.00      SYST C
+ATOM      9  C   UNK X   1      -0.260   2.099  -1.056  1.00  0.00      SYST C
+ATOM     10  C   UNK X   1       0.526   1.782  -1.450  1.00  0.00      SYST C
+ATOM     11  C   UNK X   1       0.549   0.988  -0.994  1.00  0.00      SYST C
+ATOM     12  C   UNK X   1       0.872   0.164  -0.744  1.00  0.00      SYST C
 END
